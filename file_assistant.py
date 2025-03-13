@@ -50,13 +50,13 @@ triage_agent = Agent(
 
 async def main():
     try:
-        # # web search question
-        # result = await Runner.run(triage_agent, "What is the capital of France?")
-        # print(result.final_output)
+        # web search question
+        result = await Runner.run(triage_agent, "What is the capital of France?")
+        print(result.final_output)
 
-        # # knowledge source question
-        # result = await Runner.run(triage_agent, "Find in your knowledge sources what is Deep Research?")
-        # print(result.final_output)
+        # knowledge source question
+        result = await Runner.run(triage_agent, "Find in your knowledge sources what is Deep Research?")
+        print(result.final_output)
 
         # cancel subscription question
         result = await Runner.run(triage_agent, "I want to cancel my subscription. My email is test@test.com. What do I need to do?")
