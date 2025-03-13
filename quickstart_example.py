@@ -57,16 +57,16 @@ triage_agent = Agent(
 )
 
 async def main():
-    # history question
-    result = await Runner.run(triage_agent, "Help me answer my homework question: When was the first moon landing?")
-    print(result.final_output)
-
-    # math question
-    result = await Runner.run(triage_agent, "Help me answer my homework question: What is 12*7?")
-    print(result.final_output)
-
-    # guardrail trigger example
     try:
+        # history question
+        result = await Runner.run(triage_agent, "Help me answer my homework question: When was the first moon landing?")
+        print(result.final_output)
+
+        # math question
+        result = await Runner.run(triage_agent, "Help me answer my homework question: What is 12*7?")
+        print(result.final_output)
+
+        # guardrail trigger example
         result = await Runner.run(triage_agent, "what is life?")
         print(result.final_output)
     except InputGuardrailTripwireTriggered as e:
